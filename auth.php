@@ -6,6 +6,12 @@ require 'vendor/autoload.php';
 
 function auth($db=false){
     $configFilename=ROOT.'config/db.php';
+    $dbFilename=ROOT.'basic/db/db.php';
+    if(file_exists($dbFilename)){
+        require_once $dbFilename;
+    }else{
+        die("basic install db");
+    }
     if(!$db){
         if(file_exists($configFilename)){
             $cfg=require $configFilename;
