@@ -20,7 +20,7 @@ function auth($db=false){
         }
     }
     $db=db($cfg);
-    return new basic\Auth($db);
+    return new Basic\Auth($db);
 }
 
 function isAuth(){
