@@ -130,17 +130,15 @@ class Auth
                             'name'=>$user['name'],
                             'password'=>$user['password'],
                             'uuid'=>$user['uuid'],
-                            'type'=>$user['type'],
-                            'created_at'=>time()
+                            'type'=>$user['type']
                         ];
                         $this->db->insert("users", $data);
                         $id=$this->db->id();
                         if (is_numeric($id) && $id<>0) {
                             if (isset($_POST['email']) && isset($_POST['password'])) {
                                 $this->signin();
-                            } else {
-                                return $id;
                             }
+                            return $data['uuid'];
                         } else {
                             return false;
                         }

@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "48d4a61bf02c92885c4ad97b3e7cc67a",
+    "content-hash": "26d7433eefe3f16152050e2646a7f78f",
     "packages": [
         {
             "name": "basic/auth",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aicoutodasilva/auth.git",
-                "reference": "8a02b824ca8fe21eb13b32df289984306fbf11e8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aicoutodasilva/auth/zipball/8a02b824ca8fe21eb13b32df289984306fbf11e8",
-                "reference": "8a02b824ca8fe21eb13b32df289984306fbf11e8",
-                "shasum": ""
+                "url": "https://github.com/aicoutos/auth.git",
+                "reference": "11709e864cc48bab7d3de29739982167c3232642"
             },
             "require": {
                 "catfan/medoo": "v1.4.5"
@@ -29,12 +23,11 @@
                     "Basic\\": "/src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Sistema básico de autenticação",
-            "time": "2018-11-26T18:08:46+00:00"
+            "time": "2019-02-11T18:29:54+00:00"
         },
         {
             "name": "catfan/medoo",

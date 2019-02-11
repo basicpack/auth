@@ -1,5 +1,13 @@
 {
+    "repositories": [
+        {
+            "url": "https://github.com/aicoutos/auth.git",
+            "type": "git"
+        }
+    ],
     "require": {
-        "basic/auth": "^3.0"
+        "basic/auth": "3.0.4"
     }
 }
+
+
