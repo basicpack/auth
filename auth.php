@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 function auth($db=false){
     $configFilename=ROOT.'config/db.php';
-    $dbFilename=ROOT.'basic/db/db.php';
+    $dbFilename=ROOT.'basic/getbasic/db/db.php';
     if(file_exists($dbFilename)){
         require_once $dbFilename;
     }else{
@@ -38,3 +38,4 @@ function signin(){
 function signup(){
     return auth()->signup();
 }
+
