@@ -18,8 +18,8 @@ function auth($db=false){
         }else{
             die("crie o config/db.php");
         }
+            $db=db($cfg);
     }
-    $db=db($cfg);
     return new Basic\Auth($db);
 }
 
@@ -38,4 +38,3 @@ function signin(){
 function signup(){
     return auth()->signup();
 }
-
