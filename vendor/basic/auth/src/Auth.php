@@ -100,8 +100,7 @@ class Auth
     public function signup($user=false)
     {
         $this->logout();
-        $user['created_at']=time();
-        if ($user===false) {
+        if (!$user) {
             $user=[
                 'name'=>@$_POST['name'],
                 'email'=>@$_POST['email'],
@@ -109,6 +108,7 @@ class Auth
                 'type'=>@trim(strtolower($_POST['type']))
             ];
         }
+        $user['created_at']=time();        
         $user['name']=trim($user['name']);
         $user['name']=strtolower($user['name']);
         $user['name']=ucwords($user['name']);
