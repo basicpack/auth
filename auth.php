@@ -9,18 +9,13 @@ function auth($db=false){
     $dbFilename=ROOT.'basic/getbasic/db/db.php';
     if(file_exists($dbFilename)){
         require_once $dbFilename;
+        if(!$db){
+            $db=db();
+        }
+        return new Basic\Auth($db);       
     }else{
         die("basic install db");
     }
-    if(!$db){
-        if(file_exists($configFilename)){
-            $cfg=require $configFilename;
-        }else{
-            die("crie o config/db.php");
-        }
-            $db=db($cfg);
-    }
-    return new Basic\Auth($db);
 }
 
 function isAuth(){
