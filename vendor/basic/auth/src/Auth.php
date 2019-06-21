@@ -115,9 +115,9 @@ class Auth
         $user['name']=preg_replace('/\s+/', ' ', $user['name']);
         $user['uuid']=$this->uuid();
         $error=false;
-        if (preg_match('/^[a-z0-9 .\-]+$/i', $user['name']) && strlen($user['name'])>=3) {
+        if (mb_strlen($user['name'])>=3) {
             if (filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
-                if (strlen($user['password'])>=8) {
+                if (mb_strlen($user['password'])>=8) {
                     $user['password']=password_hash($user['password'], PASSWORD_DEFAULT);
                     if ($this->db->get("users", '*', ['email'=>$user['email']])) {
                         $error[]='invalid_email';
